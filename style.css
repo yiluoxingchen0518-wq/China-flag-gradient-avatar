@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.container {
+    width: min(92%, 900px);
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.subtitle {
+    text-align: center;
+    margin-top: 10px;
+    color: #6b7280;
+}
+
+.upload-area {
+    margin-top: 28px;
+    padding: 24px;
+    text-align: center;
+    border: 2px dashed #d1d5db;
+    border-radius: 14px;
+    background: #fafafa;
+}
+
+.upload-area input {
+    font-size: 15px;
+}
+
+.preview-area {
+    position: relative;
+    margin-top: 26px;
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    overflow: hidden;
+    background:
+        linear-gradient(45deg, #eeeeee 25%, transparent 25%),
+        linear-gradient(-45deg, #eeeeee 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #eeeeee 75%),
+        linear-gradient(-45deg, transparent 75%, #eeeeee 75%);
+    background-size: 24px 24px;
+    background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+    border: 1px solid #e5e7eb;
+}
+
+canvas {
+    display: none;
+    max-width: 100%;
+    max-height: 600px;
+}
+
+#emptyText {
+    color: #9ca3af;
+}
+
+.controls {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.controls label {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    align-items: center;
+    gap: 16px;
+    font-size: 15px;
+}
+
+.controls input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
+
+#downloadButton {
+    width: 100%;
+    margin-top: 28px;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 12px;
+    background: #dc2626;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#downloadButton:hover {
+    background: #b91c1c;
+}
+
+#downloadButton:active {
+    transform: scale(0.99);
+}
+
+.privacy {
+    margin-top: 16px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+        margin: 18px auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .preview-area {
+        min-height: 280px;
+    }
+
+    .controls label {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>中国国旗渐变头像生成器</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>
+            中国国旗渐变头像生成器
+        </h1>
+
+        <p class="subtitle">
+            上传图片，在浏览器本地生成国旗渐变效果
+        </p>
+
+
+        <!-- 上传图片 -->
+        <section class="upload-area">
+
+            <input
+                type="file"
+                id="imageInput"
+                accept="image/png,image/jpeg,image/webp"
+            >
+
+        </section>
+
+
+        <!-- 图片预览 -->
+        <section class="preview-area">
+
+            <canvas id="canvas"></canvas>
+
+            <p id="emptyText">
+                请先选择一张图片
+            </p>
+
+        </section>
+
+
+        <!-- 参数控制 -->
+        <section class="controls">
+
+            <label>
+                红色强度
+
+                <input
+                    type="range"
+                    id="redStrength"
+                    min="0"
+                    max="100"
+                    value="70"
+                >
+            </label>
+
+
+            <label>
+                渐变范围
+
+                <input
+                    type="range"
+                    id="gradientSize"
+                    min="20"
+                    max="100"
+                    value="55"
+                >
+            </label>
+
+
+            <label>
+                五星透明度
+
+                <input
+                    type="range"
+                    id="starOpacity"
+                    min="0"
+                    max="100"
+                    value="90"
+                >
+            </label>
+
+
+            <label>
+                五星大小
+
+                <input
+                    type="range"
+                    id="starScale"
+                    min="60"
+                    max="180"
+                    value="110"
+                >
+            </label>
+
+
+            <label>
+                五星间距
+
+                <input
+                    type="range"
+                    id="starSpacing"
+                    min="70"
+                    max="180"
+                    value="115"
+                >
+            </label>
+
+        </section>
+
+
+        <!-- 下载 -->
+        <button id="downloadButton">
+            下载处理后的图片
+        </button>
+
+
+        <p class="privacy">
+            图片仅在你的浏览器本地处理，不会上传服务器。
+        </p>
+
+    </main>
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
